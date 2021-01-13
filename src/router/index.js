@@ -1,11 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import About from '@/components/About'
-// import Home from '@/components/Home'
 import Home from '@/views/home/Home'
-import Message from '@/components/Message'
-import Profile from '@/components/Profile'
+import Profile from '@/views/profile/Profile'
 import Category from '@/views/category/Category'
+import Cart from '@/views/cart/Cart'
 Vue.use(Router)
 
 // 解决ElementUI导航栏中的vue-router在3.0版本以上重复点菜单报错问题
@@ -47,16 +45,21 @@ const router = new Router({
       meta: {
         title: '个人中心'
       }
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart,
+      meta: {
+        title: '购物车'
+      } 
     }
   ],
   mode:'history' 
 })
 // 使用路由守卫来修改标题
 router.beforeEach((to,from,next) => {
-  // console.log(to)
   window.document.title = to.meta.title
-  // if (to.name == 'About') next({name: 'Profile'})
-  // else next()
   next()
 })
 export default router

@@ -2,7 +2,7 @@
   <div id="app">
     <router-view/>
     <!-- 底部菜单 -->
-    <main-tab-bar></main-tab-bar>
+    <div class='maintabBar'><main-tab-bar></main-tab-bar></div>
   </div>
 </template>
 
@@ -30,5 +30,11 @@
  }
   a{
     text-decoration: none;
+  }
+  .maintabBar{
+    display:flex;
+    bottom:0;
+    left:0;
+    z-index:9;
   }
 </style>
