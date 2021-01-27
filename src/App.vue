@@ -23,14 +23,6 @@
 </script>
 
 <style>
- /* @import "@/assets/css/base.css" */
- body, p{
-   margin:0;
-   padding:0;
- }
-  a{
-    text-decoration: none;
-  }
   .maintabBar{
     display:flex;
     bottom:0;

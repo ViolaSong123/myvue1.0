@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import Axios from 'axios'
 import filters from '@/filter/filter'
-
+import '@/assets/css/base.css'
 //全局注册过滤器
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])

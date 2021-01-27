@@ -2,7 +2,7 @@
     <div class='itemList'>
         <div class='title'>{{goodTitle}}</div>
         <div class='goodlist' >
-            <div v-for="(item, key) in goodListArray" :key="key" @click="selectGood(item)">
+            <div v-for="(item, key) in goodListArray" :key="key" @click="selectGood(item, key)" :class="{'activeStyle': item.isActive}">
                 <!-- <img src='~@/assets/img/common/goods.png' alt=''/> -->
                 <img :src='item.src' alt=''/>
                 <p>{{item.name}}</p>
@@ -25,12 +25,19 @@ export default {
             default: []
         }
     },
+    data () {
+        return{
+            // 
+        }
+    },
     created: function () {
        
     },
     methods:{
-        selectGood:function (item) {
-            this.$store.commit('selectGoods',item)
+        selectGood:function (item, key) {
+            this.goodListArray[key].isActive = !this.goodListArray[key].isActive
+            // this.$emit('selectGoods',key)
+            // this.$store.commit('selectGoods',item)
         }
     }
 }
@@ -57,5 +64,8 @@ export default {
 .itemList .goodlist .price{
     color:red;
     font-size:12px;
+}
+.itemList .goodlist .activeStyle{
+    background-color: rgb(129, 92, 92);
 }
 </style>

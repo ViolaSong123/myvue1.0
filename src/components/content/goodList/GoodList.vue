@@ -46,7 +46,7 @@ export default {
 }
 </script>
 <style scoped>
-.goodlist{
+.goodlist{                                                                                                                                                                      
     width:100%;
     display:flex;
     flex-direction:row;
