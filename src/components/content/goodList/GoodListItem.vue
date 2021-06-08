@@ -36,6 +36,7 @@ export default {
     methods:{
         selectGood:function (item, key) {
             this.goodListArray[key].isActive = !this.goodListArray[key].isActive
+            this.$toast.show()
             // this.$emit('selectGoods',key)
             // this.$store.commit('selectGoods',item)
         }

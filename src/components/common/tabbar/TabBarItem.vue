@@ -1,4 +1,4 @@
-<template>
+78 <template>
   <!--所有的item都展示同一个图片, 同一个文字-->
   <div class="tab-bar-item" @click="itemClick">
     <div v-if="!isActive"><slot name="item-icon"></slot></div>
